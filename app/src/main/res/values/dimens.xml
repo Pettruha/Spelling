@@ -1,3 +1,10 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <!-- Редактирование слова -->
+    <dimen name="letter_edit_top">16dp</dimen>
+    <dimen name="letter_text_size">50sp</dimen>
+    <dimen name="letter_text_size_select">25sp</dimen>
+    <dimen name="letter_height">100dp</dimen>
+    <dimen name="letter_height_select">50dp</dimen>
+    <dimen name="letter_padding">5dp</dimen>
 </resources>

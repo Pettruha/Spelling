@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/word_letter_set_title"
+        android:padding="@dimen/letter_padding"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Буква, которая должна быть -->
+    <TextView
+        android:id="@+id/letter"
+        android:layout_width="100dp"
+        android:layout_height="@dimen/letter_height"
+        android:background="@drawable/letter_square"
+        android:textColor="#ffffff"
+        android:text="@string/word_edit_letter"
+        android:textAlignment="center"
+        android:textSize="@dimen/letter_text_size"
+        android:padding="@dimen/letter_padding"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Эта буква не отображается. Нужно вписать правильную -->
+    <CheckBox
+        android:id="@+id/checkbox_one_letter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/word_edit_one_letter"
+        app:layout_constraintTop_toBottomOf="@+id/letter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <!-- Второй вариант написания буквы -->
+   <LinearLayout
+       android:id="@+id/layout_second"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:visibility="visible"
+       android:textAlignment="center"
+       android:orientation="vertical"
+       app:layout_constraintTop_toBottomOf="@+id/checkbox_one_letter"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:layout_constraintRight_toRightOf="parent">
+
+        <EditText
+            android:id="@+id/letter_second"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:autofillHints="@string/word_edit_second_letter_desc"
+            android:hint="@string/word_edit_letter"
+            android:inputType="text"
+            android:maxLength="2" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/word_edit_second_letter_desc" />
+   </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

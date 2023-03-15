@@ -15,7 +15,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.Spelling">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,6 +25,21 @@
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.words.WordsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Spelling">
+        </activity>
+        <activity
+            android:name=".ui.wordedit.WordEditActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Spelling">
+        </activity>
+        <activity
+            android:name=".ui.game.GameActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Spelling">
         </activity>
     </application>
 
