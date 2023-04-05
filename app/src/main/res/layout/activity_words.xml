@@ -6,38 +6,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Стрелочка назад -->
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:contentDescription="@string/back_arrow"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
     <!-- Поиск по списку слов -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/element_name_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_arrow"
         app:errorEnabled="true">
 
-        <EditText
-            android:id="@+id/element_name"
+        <SearchView
+            android:id="@+id/search"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="15dp"
             android:autofillHints="@string/words_search"
             android:hint="@string/words_search"
             android:inputType="text"
             android:maxLength="100"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="UnusedAttribute" />
+            app:layout_constraintTop_toTopOf="parent" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <!-- список слов -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_elements"
+        android:id="@+id/list_word"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:layout_editor_absoluteX="5dp"
-        app:layout_constraintTop_toBottomOf="@+id/element_name_container">
+        app:layout_constraintTop_toBottomOf="@+id/element_name_container"
+        app:layout_constraintBottom_toBottomOf="parent">
     </androidx.recyclerview.widget.RecyclerView>
 
     <!-- добавить новое слово -->

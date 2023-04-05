@@ -25,7 +25,13 @@ data class Letters(
     var letter: String = "", // буква слова
 
     @ColumnInfo(name = "missed")
-    var missed: Boolean = false, // пропущена буква при выводе или нет
+    var missed: Boolean = false, // пропущена буква при выводе или нетLe
+
+    @ColumnInfo(name = "option")
+    var letterOption: String = "", // вариант написания пропущенной буквы. Неправильная буква. Правильная буква хранится в Letters
+
+    @ColumnInfo(name = "only_write")
+    var onlyWrite: Boolean = false, // Неправильный вариант написания буквы не указывается. Нужно только вписать правильную букву
 
     @ColumnInfo(name = "position")
     var position: Int = 0 // позиция буквы в слове

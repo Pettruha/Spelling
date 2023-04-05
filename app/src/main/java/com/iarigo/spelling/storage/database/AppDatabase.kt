@@ -4,15 +4,18 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.iarigo.spelling.storage.dao.LettersDao
 import com.iarigo.spelling.storage.dao.WordsDao
+import com.iarigo.spelling.storage.entity.Letters
 import com.iarigo.spelling.storage.entity.Words
 
 @Database(
-    entities = [Words::class],
+    entities = [Words::class, Letters::class],
     version = 1
 )
 abstract class AppDatabase : RoomDatabase() {
     abstract fun wordsDao(): WordsDao // слова
+    abstract fun lettersDao(): LettersDao // буквы
 
     companion object {
         @Volatile

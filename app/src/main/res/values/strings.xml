@@ -4,8 +4,12 @@
     <!-- Главный экран -->
     <string name="start">Start</string>
 
-    <!-- Игровой экран -->
-    <string name="game">Start game</string>
+    <!-- Стрелочка назад -->
+    <string name="back_arrow">Назад</string>
+
+    <!-- Стартовый игровой экран -->
+    <string name="first_game">Выбрать букву</string>
+    <string name="second_game">Написать букву</string>
 
     <!-- Правое меню -->
     <string name="action_settings">Settings</string>
@@ -16,14 +20,18 @@
     <string name="word_edit_letter"> </string>
     <string name="word_letter_set_title">Укажите вариант написания для буквы слова или укажите, что буква будет пропущена и необходимо написать букву самостоятельно</string>
     <string name="word_edit_one_letter">Букву нужно написать</string>
+    <string name="word_edit_save_error">Необходимо указать хотя бы одну букву в слове</string>
     <string name="word_edit_second_letter_desc">Укажите второе написание буквы</string>
     <string name="word_edit_second_letter_error">Необходимо указать второй вариант написания буквы в слове</string>
     <string name="word_edit_save">Сохранить</string>
     <string name="word_edit_remove">Убрать букву</string>
     <string name="word_edit_cancel">Отмена</string>
+    <string name="word_saved">Сохранено</string>
+    <string name="word_edited">Сохранено</string>
 
     <!-- Список слов -->
     <string name="words_search">Поиск</string>
+    <string name="words_search_nothing">Не найдено</string>
     <string name="words_add">Добавить</string>
 
     <!-- Вариант написания буквы -->

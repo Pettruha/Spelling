@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="grey">#e6e6e6</color>
     <color name="grey_border">#3c3c3c</color>
+    <color name="listColorDivider">#3c3c3c</color>
 </resources>
